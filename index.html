@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACI - Solutions Informatiques, Cybersécurité & Réseaux à Douala, Cameroun</title>
+
+    <meta name="description"
+        content="ACI est votre partenaire IT de confiance à Douala, Cameroun. Nous offrons des solutions complètes en cybersécurité, réseaux, vidéosurveillance, contrôle d'accès, alarmes incendie et intrusion pour entreprises. Transformation digitale et support informatique sur mesure.">
+    <meta name="keywords"
+        content="ACI, Assistance Conseil Ingénierie, services informatiques Douala, IT Cameroun, cybersécurité Douala, réseau informatique Douala, vidéosurveillance Douala, contrôle d'accès Cameroun, alarmes incendie Douala, alarmes intrusion Cameroun, support informatique Douala, solutions IT entreprises, transformation digitale Afrique, télécommunication Cameroun">
+    <meta name="author" content="ACI - Assistance, Conseil et Ingénierie">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://assistanceconseiling.com/">
+    <meta property="og:title" content="ACI - Votre Partenaire Stratégique en Solutions Informatiques à Douala">
+    <meta property="og:description"
+        content="Transformez votre entreprise à Douala avec les services IT innovants d'ACI : cybersécurité, réseaux, vidéosurveillance, et plus encore.">
+    <meta property="og:image" content="http://www.assistanceconseiling.com/images/logo.jpg">
+    <meta property="og:url" content="http://www.assistanceconseiling.com/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ACI - Solutions IT de Confiance à Douala, Cameroun">
+    <meta name="twitter:description"
+        content="Découvrez les services d'ACI pour la cybersécurité, réseaux, vidéosurveillance et support informatique sur mesure pour votre entreprise à Douala.">
+    <meta name="twitter:image" content="http://www.assistanceconseiling.com/images/logo.jpg">
+    <link rel="icon" href="./images/logo aci.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/logo.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./images/logo.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for hero section background image */
+        .hero-section {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            /* Ensures images don't overflow */
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Sombre légèrement l'image pour la lisibilité du texte */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+
+        /* Custom styles for service cards and solution cards hover effects */
+        .card-hover-effect {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card-hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Smooth scroll for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom 3D card effect (simple shadow for Tailwind consistency) */
+        .card-3d {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card-3d:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hide scrollbar for the solutions section, but allow scrolling */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari and Opera */
+        }
+
+        /* Hero Carousel specific styles */
+        .carousel-image {
+            width: 100%;
+            height: 100vh;
+            /* Full viewport height */
+            object-fit: cover;
+            /* Cover the container */
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carousel-image.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-800">
+
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="./images/logo.jpg" alt="Logo ACI" class="h-10 w-auto mr-3 rounded-md">
+                <!-- Adjusted height and added rounded-md -->
+                <div class="flex flex-col text-left">
+                    <span class="text-xl font-bold text-blue-800">Assistance, Conseil et Ingénierie</span>
+                    <span class="text-sm text-gray-500">You think we build.</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#hero" class="text-gray-600 hover:text-blue-600 font-medium">Accueil</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium">À Propos</a>
+                <a href="#why-choose-us" class="text-gray-600 hover:text-blue-600 font-medium">Pourquoi nous choisir</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600 font-medium">Services</a>
+                <a href="#solutions" class="text-gray-600 hover:text-blue-600 font-medium">Solutions</a>
+                <a href="#clients" class="text-gray-600 hover:text-blue-600 font-medium">Clients</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-button"
+                    class="text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-lg">
+            <a href="#hero" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Accueil</a>
+            <a href="#about" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">À Propos</a>
+            <a href="#why-choose-us" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Pourquoi nous choisir</a>
+            <a href="#services" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="#solutions" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Solutions</a>
+            <a href="#clients" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Clients</a>
+            <a href="#contact" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section flex items-center justify-center text-center text-white h-screen">
+        <!-- Carousel Images -->
+        <img src="./images/background/1.jpg" class="carousel-image active" alt="Image 1">
+        <img src="./images/background/2.jpg" class="carousel-image" alt="Image 2">
+        <img src="./images/background/3.jpg" class="carousel-image" alt="Image 3">
+        <img src="./images/background/4.jpg" class="carousel-image" alt="Image 4">
+        <img src="./images/background/5.jpg" class="carousel-image" alt="Image 5">
+        <img src="./images/background/6.jpg" class="carousel-image" alt="Image 6">
+        <img src="./images/background/7.jpg" class="carousel-image" alt="Image 7">
+
+        <div class="hero-overlay"></div>
+        <div class="hero-content p-8 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-pulse">
+                Votre Partenaire Stratégique en Solutions Informatiques
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 opacity-90">
+                Transformez votre entreprise avec nos services IT innovants et sur mesure.
+            </p>
+            <a href="#contact"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+                Contactez-nous
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 lg:flex lg:items-center">
+            <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
+                <img src="./images/qui.jpg"
+                    alt="Équipe ACI en action, symbolisant l'innovation et la collaboration"
+                    class="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            </div>
+            <div class="lg:w-1/2">
+                <h2 class="text-4xl font-extrabold text-gray-800 mb-6">
+                    <span class="text-blue-600">Qui sommes-nous ?</span>
+                </h2>
+                <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                    Basée à **Douala, Cameroun**, **ACI - Assistance, Conseil et Ingénierie** est votre partenaire
+                    stratégique pour des **solutions informatiques de pointe**. Nous nous engageons à propulser votre
+                    entreprise vers de nouveaux sommets grâce à une technologie innovante et sur mesure. Fondée sur les
+                    piliers de l'**innovation**, de l'**excellence** et d'un **engagement client** inébranlable, ACI
+                    offre une gamme complète de services IT, parfaitement adaptés aux dynamiques et défis du marché
+                    africain d'aujourd'hui.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-700">
+                    Notre équipe d'**experts certifiés et passionnés** met son savoir-faire local et international à
+                    votre service. Nous concevons et déployons des solutions **robustes, sécurisées et performantes**
+                    qui non seulement résolvent vos défis technologiques actuels, mais anticipent aussi vos besoins
+                    futurs. Chez ACI, notre mission est claire : être le catalyseur de votre **croissance** et de votre
+                    **transformation digitale**, en bâtissant avec vous l'avenir de votre entreprise.
+                </p>
+                <a href="#contact"
+                    class="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    Découvrez nos valeurs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-800 mb-12">
+                Pourquoi <span class="text-blue-600">Choisir ACI</span> ?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md card-hover-effect">
+                    <div class="text-5xl text-blue-600 mb-6">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Expertise Reconnue</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Des années d'expérience et une équipe de spécialistes certifiés pour des solutions fiables.
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md card-hover-effect">
+                    <div class="text-5xl text-blue-600 mb-6">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Innovation Constante</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Veille technologique et adoption des dernières innovations pour votre avantage.
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md card-hover-effect">
+                    <div class="text-5xl text-blue-600 mb-6">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Support Réactif</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Assistance dédiée et rapide pour assurer la continuité de vos opérations.
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md card-hover-effect">
+                    <div class="text-5xl text-blue-600 mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Sécurité Maximale</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Des solutions conçues avec les meilleures pratiques de sécurité pour protéger vos données.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-800 mb-12">
+                Nos <span class="text-blue-600">Services</span> Complets
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover-effect flex flex-col items-center text-center">
+                    <img src="./images/video.jpg" class="mb-6 rounded-md w-full h-40 object-cover"
+                        alt="Vidéo surveillance">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Vidéo Surveillance</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">Sécurisez vos installations avec nos solutions de
+                        vidéosurveillance avancées :</p>
+                    <ul class="text-left w-full space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Installation de systèmes de vidéosurveillance :</b>
+                                <br>
+                                Déploiement de caméras et systèmes de surveillance pour une sécurité accrue.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Maintenance et support :</b>
+                                <br>
+                                Services de maintenance pour garantir la fiabilité de vos systèmes de surveillance.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Surveillance en temps réel :</b>
+                                <br>
+                                Solutions pour la surveillance en direct et la gestion des enregistrements vidéo.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div class="font-semibold">Et bien d'autres...</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover-effect flex flex-col items-center text-center">
+                    <img src="./images/controle.jpg" class="mb-6 rounded-md w-full h-40 object-cover"
+                        alt="Contrôle d'accès">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Contrôle d'Accès</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">Gérez les accès à vos bâtiments et zones sensibles
+                        avec nos systèmes de contrôle d'accès fiables.</p>
+                    <ul class="text-left w-full space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Installation de systèmes de contrôle d'accès :</b>
+                                <br>
+                                Déploiement de lecteurs de cartes et de systèmes biométriques.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Gestion des utilisateurs :</b>
+                                <br>
+                                Gestion centralisée des accès et des autorisations.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Journalisation des accès :</b>
+                                <br>
+                                Suivi et enregistrement des entrées et sorties.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div class="font-semibold">Et bien d'autres...</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover-effect flex flex-col items-center text-center">
+                    <img src="./images/reseau.jpg" class="mb-6 rounded-md w-full h-40 object-cover"
+                        alt="Réseau et Télécommunication">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Réseau et Télécommunication</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">Bénéficiez d'une infrastructure réseau performante et
+                        de solutions de télécommunication adaptées à vos besoins.</p>
+                    <ul class="text-left w-full space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Installation et configuration de réseaux :</b>
+                                <br>
+                                Déploiement de réseaux locaux et étendus.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Solutions de téléphonie IP :</b>
+                                <br>
+                                Mise en place de systèmes de téléphonie sur IP.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Maintenance et support réseau :</b>
+                                <br>
+                                Services de maintenance et d'assistance pour vos réseaux.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Câblage structuré :</b>
+                                <br>
+                                Mise en place d’infrastructures de câblage adaptées à vos besoins pour une performance
+                                optimale.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Administration et configuration :</b>
+                                <br>
+                                Gestion et configuration de vos réseaux pour assurer leur bon fonctionnement.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Interconnexion des sites :</b>
+                                <br>
+                                Assurez une communication fluide entre vos différents sites avec nos solutions
+                                d’interconnexion fiables.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Stations de base GSM :</b>
+                                <br>
+                                Installation et maintenance des stations de base GSM pour garantir une couverture réseau
+                                optimale.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div class="font-semibold">Et bien d'autres...</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover-effect flex flex-col items-center text-center">
+                    <img src="./images/alarme_incendie.png" class="mb-6 rounded-md w-full h-40 object-cover"
+                        alt="Alarmes Incendie">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Alarmes Incendie</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">Protégez des risques d'incendie grâce à nos systèmes
+                        d'alarme fiables et performants :</p>
+                    <ul class="text-left w-full space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Installation de détecteurs de fumée et de chaleur :</b>
+                                <br>
+                                Mise en place de dispositifs de détection précoce pour une réaction rapide.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Systèmes d'alarme centralisés :</b>
+                                <br>
+                                Solutions complètes avec des panneaux de contrôle et des sirènes d'alerte.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Maintenance et vérification :</b>
+                                <br>
+                                Services réguliers pour assurer le bon fonctionnement de vos systèmes d'alarme incendie.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div class="font-semibold">Et bien d'autres...</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover-effect flex flex-col items-center text-center">
+                    <img src="./images/alarme_intrusion.jpg" class="mb-6 rounded-md w-full h-40 object-cover"
+                        alt="Alarmes Intrusion">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Alarmes Intrusion</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">Dissuadez les intrusions et protégez vos biens avec
+                        nos systèmes d'alarme anti-intrusion :</p>
+                    <ul class="text-left w-full space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Installation de détecteurs de mouvement et de périmètre :</b>
+                                <br>
+                                Détection fiable des tentatives d'intrusion dans vos locaux.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Alarmes connectées et alertes à distance :</b>
+                                <br>
+                                Soyez informé en temps réel en cas d'alerte, où que vous soyez.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div>
+                                <b class="font-semibold">Intégration avec d'autres systèmes de sécurité :</b>
+                                <br>
+                                Possibilité de combiner votre alarme intrusion avec la vidéosurveillance et le contrôle
+                                d'accès.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+                            <div class="font-semibold">Et bien d'autres...</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-800 mb-12">
+                Nos <span class="text-blue-600">Solutions</span> Innovantes
+            </h2>
+            <div class="flex overflow-x-auto snap-x snap-mandatory pb-6 space-x-6 lg:space-x-8 no-scrollbar">
+                <div
+                    class="flex-shrink-0 w-80 md:w-96 snap-center bg-gray-50 p-8 rounded-lg shadow-md card-hover-effect">
+                    <img src="./images/solutions/1.jpg" alt="Solutions Cloud"
+                        class="mb-6 rounded-md w-full h-48 object-cover">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Solutions Cloud</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Optimisez votre infrastructure avec nos solutions cloud innovantes pour une flexibilité et une
+                        scalabilité maximales.
+                    </p>
+                    <a href="#"
+                        class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="flex-shrink-0 w-80 md:w-96 snap-center bg-gray-50 p-8 rounded-lg shadow-md card-hover-effect">
+                    <img src="./images/solutions/2.jpg" alt="Cybersécurité"
+                        class="mb-6 rounded-md w-full h-48 object-cover">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Cybersécurité</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Protégez vos données et systèmes contre les menaces avec nos solutions de cybersécurité avancées
+                        et proactives.
+                    </p>
+                    <a href="#"
+                        class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="flex-shrink-0 w-80 md:w-96 snap-center bg-gray-50 p-8 rounded-lg shadow-md card-hover-effect">
+                    <img src="./images/solutions/3.jpg" alt="Support Informatique"
+                        class="mb-6 rounded-md w-full h-48 object-cover">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Support Informatique</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Bénéficiez d'un support informatique fiable et réactif pour assurer la continuité de vos
+                        opérations.
+                    </p>
+                    <a href="#"
+                        class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="flex-shrink-0 w-80 md:w-96 snap-center bg-gray-50 p-8 rounded-lg shadow-md card-hover-effect">
+                    <img src="./images/solutions/4.jpg" alt="Audit et Conseils IT"
+                        class="mb-6 rounded-md w-full h-48 object-cover">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Audit et Conseils IT</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Des évaluations complètes de votre infrastructure IT et des recommandations stratégiques pour
+                        optimiser vos performances.
+                    </p>
+                    <a href="#"
+                        class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="flex-shrink-0 w-80 md:w-96 snap-center bg-gray-50 p-8 rounded-lg shadow-md card-hover-effect">
+                    <img src="./images/solutions/5.jpg" alt="Transformation Digitale"
+                        class="mb-6 rounded-md w-full h-48 object-cover">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Transformation Digitale</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Accompagnement personnalisé pour guider votre entreprise à travers les défis de la
+                        digitalisation et saisir de nouvelles opportunités.
+                    </p>
+                    <a href="#"
+                        class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-800 mb-12">
+                Ils nous font <span class="text-blue-600">Confiance</span>
+            </h2>
+            <div
+                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center">
+                <div
+                    class="w-32 h-32 flex items-center justify-center p-2 rounded-lg bg-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <img src="./images/client/benarbe-cameroun-1024x1024.jpg" alt="Benarbe Cameroun"
+                        class="max-w-full max-h-full object-contain">
+                </div>
+                <div
+                    class="w-32 h-32 flex items-center justify-center p-2 rounded-lg bg-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <img src="./images/client/groupe-MK.png" alt="Groupe MK"
+                        class="max-w-full max-h-full object-contain">
+                </div>
+                <div
+                    class="w-32 h-32 flex items-center justify-center p-2 rounded-lg bg-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <img src="./images/client/guce.jpg" alt="GUCE" class="max-w-full max-h-full object-contain">
+                </div>
+                <div
+                    class="w-32 h-32 flex items-center justify-center p-2 rounded-lg bg-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <img src="./images/client/keva.jpg" alt="Keva" class="max-w-full max-h-full object-contain">
+                </div>
+                <div
+                    class="w-32 h-32 flex items-center justify-center p-2 rounded-lg bg-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <img src="./images/client/residence.jpg" alt="Résidence"
+                        class="max-w-full max-h-full object-contain">
+                </div>
+                <div
+                    class="w-32 h-32 flex items-center justify-center p-2 rounded-lg bg-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <img src="./images/client/rg-et-co.jpg" alt="RG & Co" class="max-w-full max-h-full object-contain">
+                </div>
+                <div
+                    class="w-32 h-32 flex items-center justify-center p-2 rounded-lg bg-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <img src="./images/client/sims.jpg" alt="SIMS" class="max-w-full max-h-full object-contain">
+                </div>
+                <div
+                    class="w-32 h-32 flex items-center justify-center p-2 rounded-lg bg-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <img src="./images/client/tjk.png" alt="TJK" class="max-w-full max-h-full object-contain">
+                </div>
+                <div
+                    class="w-32 h-32 flex items-center justify-center p-2 rounded-lg bg-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <img src="./images/client/rimco motors.jpg" alt="Rimco Motors"
+                        class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-gray-800 text-center mb-12">
+                Contactez-<span class="text-blue-600">nous</span>
+            </h2>
+            <div class="flex flex-col lg:flex-row lg:justify-center lg:items-start gap-12">
+                <div
+                    class="lg:w-1/2 flex flex-col justify-center items-start text-left bg-white p-8 rounded-lg shadow-md">
+                    <p class="text-lg text-gray-700 mb-6">
+                        Nous vous répondrons dans les plus brefs délais.
+                    </p>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Nos adresses :</h3>
+                    <ul class="space-y-4 text-lg text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-blue-600 mr-3 text-xl"></i>
+                            <span><a href="tel:+237671891110">+237 671 89 11 10</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-600 mr-3 text-xl"></i>
+                            <span><a href="mailto:contact@assistanceconseiling.com">contact@assistanceconseiling.com</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-facebook text-blue-600 mr-3 text-xl"></i>
+                            <a href="https://www.facebook.com/profile.php?id=61558506376681&mibextid=ZbWKwL"
+                                target="_blank" class="text-blue-600 hover:underline">ACI sur Facebook</a>
+                        </li>
+                    </ul>
+                    <div class="mt-8 w-full">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Où nous trouver :</h3>
+                        <div class="rounded-lg overflow-hidden shadow-lg" style="height: 300px; width: 100%;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.627773950117!2d9.731730074218748!3d4.045610099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10610f63d043444b%3A0x4c2f6d0f6a2a0d18!2sBonapriso%2C%20Douala!5e0!3m2!1sen!2scm!4v1719941604169!5m2!1sen!2scm"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Formulaire de contact</h3>
+                    <form id="contactForm" action="./process/process_contact.php" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="sr-only">Nom</label>
+                            <input type="text" name="name" id="name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Votre Nom" required>
+                        </div>
+                        <div>
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Votre Email" required>
+                        </div>
+                        <div>
+                            <label for="subject" class="sr-only">Sujet</label>
+                            <input type="text" name="subject" id="subject"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Sujet du message" required>
+                        </div>
+                        <div>
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea name="message" id="message"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                rows="6" placeholder="Votre Message" required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105">
+                            Envoyer le Message
+                        </button>
+                    </form>
+                    <div id="messageDisplay" class="mt-6 p-4 text-center text-lg hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            const formData = new FormData(form); // Collect form data
+            const messageDisplay = document.getElementById('messageDisplay');
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            // Reset message display and disable button
+            messageDisplay.classList.add('hidden');
+            messageDisplay.textContent = '';
+            messageDisplay.classList.remove('bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Envoi en cours...';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData, // Send form data
+                    // headers are automatically set by fetch for FormData
+                });
+
+                // Check if the response is OK (status 200-299)
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json(); // Parse the JSON response from PHP
+
+                messageDisplay.classList.remove('hidden');
+                if (result.status === 'success') {
+                    messageDisplay.classList.add('bg-green-100', 'text-green-800', 'rounded-lg');
+                    messageDisplay.textContent = result.message;
+                    form.reset(); // Clear the form fields on success
+                } else {
+                    messageDisplay.classList.add('bg-red-100', 'text-red-800', 'rounded-lg');
+                    messageDisplay.textContent = result.message || 'Une erreur inconnue est survenue.';
+                }
+            } catch (error) {
+                console.error('Error during form submission:', error);
+                messageDisplay.classList.remove('hidden');
+                messageDisplay.classList.add('bg-red-100', 'text-red-800', 'rounded-lg');
+                messageDisplay.textContent = 'Désolé, une erreur réseau est survenue. Veuillez vérifier votre connexion ou réessayer. Ou contactez-nous par téléphone ou email directement. Merci !';
+            } finally {
+                submitButton.disabled = false; // Re-enable button
+                submitButton.textContent = 'Envoyer le Message';
+            }
+        });
+    </script>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h5 class="text-xl font-bold mb-4 text-blue-400">À propos de nous</h5>
+                    <p class="text-gray-300 leading-relaxed">
+                        ACI est votre partenaire de confiance pour des solutions informatiques sur mesure. Nous offrons
+                        des services de conseil, d'ingénierie et d'assistance pour répondre à vos besoins uniques.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold mb-4 text-blue-400">Contact</h5>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-blue-400"></i>
+                            <span>Douala, Bonapriso, Cameroun</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-400"></i>
+                            <span>+237 671 89 11 10</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                            <span>contact@assistanceconseiling.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold mb-4 text-blue-400">Réseaux sociaux</h5>
+                    <ul class="flex space-x-4">
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=61558506376681&mibextid=ZbWKwL"
+                                target="_blank"
+                                class="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-2xl">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-2xl">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-2xl">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/+237671813867" target="_blank"
+                                class="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-2xl">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-gray-700 my-8">
+            <p class="text-center text-gray-400 text-sm">
+                &copy; <span id="currentYear"></span> ACI. Tous droits réservés. &nbsp;/ Conçu par <a
+                    href="https://wa.me/+237671813867" target="_blank" class="text-blue-400 hover:underline">Steve
+                    Tchingang</a>.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

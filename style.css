@@ -1,0 +1,259 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero-image {
+    height: 60vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white; /* Assurez-vous que le texte est blanc */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Ajout d'une ombre pour une meilleure lisibilité */
+}
+
+.hero-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-slogan {
+    font-size: 1.2em;
+}
+
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Superposition sombre */
+    z-index: 1; /* Place la superposition au-dessus de l'image */
+}
+
+.carousel-caption {
+    z-index: 2; /* Place la légende au-dessus de la superposition */
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        height: 80vh;
+    }
+
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .hero-slogan {
+        font-size: 1em;
+    }
+}
+
+.service-card {
+    perspective: 1000px;
+}
+
+.card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover .card-3d {
+    transform: rotateY(20deg);
+}
+
+footer {
+    background-color: #f8f9fa;
+}
+
+#services {
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    padding: 80px 0;
+}
+
+.service-card {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.5s, box-shadow 0.5s;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.service-card:hover .card-3d {
+    transform: rotateY(15deg) translateZ(20px);
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-3d img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card-text {
+    color: #666;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: #17a2b8;
+}
+
+.service-card {
+    display: flex;
+}
+
+.card-3d {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-body {
+    flex-grow: 1;
+    /*display: flex;*/
+    flex-direction: column;
+}
+
+.card-body ul {
+    margin-top: auto;
+}
+
+.card-body ul li {
+    margin-bottom: 8px;
+}
+
+.card-body ul li i {
+    color: #17a2b8;
+    margin-right: 8px;
+}
+
+.card-body ul li {
+    margin-bottom: 10px;
+}
+
+.card-body ul li i {
+    color: #17a2b8;
+    margin-right: 10px;
+}
+
+#solutionsCarousel img {
+    height: 400px; /* Ajustez la hauteur selon vos besoins */
+    object-fit: cover;
+}
+
+#contact h3 {
+    margin-bottom: 20px;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+}
+
+#contact ul li i {
+    margin-right: 10px;
+}
+
+/* Nav bar */
+.navbar {
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #ff9800, #2196f3, #4caf50); /* Dégradé orange, bleu, vert */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: flex-start; /* Alignement en haut */
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    padding: 10px 15px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff9800; /* Couleur de survol orange */
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    width: 0;
+    height: 2px;
+    background-color: #ff9800; /* Couleur de la ligne orange */
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: calc(100% - 30px);
+}
+
+.slogan-bar {
+    font-size: 0.8em;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Pourquoi nous */
+#pourquoi-nous h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#pourquoi-nous p {
+    color: #666;
+    font-size: 1em;
+}
+
+#pourquoi-nous i {
+    transition: transform 0.3s ease;
+}
+
+#pourquoi-nous i:hover {
+    transform: scale(1.1);
+}
